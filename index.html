@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Population Statistics</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+            background-color: #F0FFF0; /* Lime light background color */
+        }
+        .content {
+            width: 40%; /* Reduce the width of the content to give more space to the map */
+        }
+        .map {
+            width: 60%; /* Increase the width of the map container */
+            text-align: left; /* Align the image to the left */
+        }
+        img {
+            max-width: 100%; /* Ensures the image scales properly */
+            height: auto; /* Maintains aspect ratio */
+            width: 2000px; /* Set a larger fixed width for the image */
+        }
+        select {
+            width: 200px;
+            height: 30px;
+            font-size: 14px;
+        }
+        #countryPopulation {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>World Population Statistics</h1>
+        <label for="continentSelect">Select Continent:</label>
+        <select id="continentSelect">
+            <option value="">--Select a Continent--</option>
+        </select>
+        <br><br>
+        <label for="countrySelect">Select Country:</label>
+        <select id="countrySelect" disabled>
+            <option value="">--Select a Country--</option>
+        </select>
+        <div id="countryPopulation"></div>
+        <div id="hoverInfo"></div>
+
+        <!-- Add new boxes for males, females, and children -->
+        <div id="populationDetails" style="margin-top: 20px;">
+            <div id="malePopulation" style="font-size: 14px; margin-bottom: 10px;"><strong>Males:</strong> </div>
+            <div id="femalePopulation" style="font-size: 14px; margin-bottom: 10px;"><strong>Females:</strong> </div>
+            <div id="childrenPopulation" style="font-size: 14px;"><strong>Children:</strong> </div>
+        </div>
+    </div>
+    <div class="map">
+        <h2>World Map</h2>
+        <img src="images/world-map.png" alt="World Map" style="width: 1200px;">
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
